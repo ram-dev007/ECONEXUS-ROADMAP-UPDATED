@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌱 EcoNexus Roadmap</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="header-top">
+                <div class="logo-section">
+                    <h1 class="title">🌱 EcoNexus Roadmap</h1>
+                </div>
+                <div class="stats-section">
+                    <div class="stat-item">
+                        <span class="stat-label">Checkpoints:</span>
+                        <span class="stat-value" id="totalCheckpoints">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Features:</span>
+                        <span class="stat-value" id="totalFeatures">0</span>
+                    </div>
+                </div>
+            </div>
+            <div class="header-controls">
+                <div class="control-group">
+                    <label class="control-label">View:</label>
+                    <button id="horizontalViewBtn" class="btn btn-view active" data-view="horizontal">
+                        <span>↔️</span> Horizontal
+                    </button>
+                    <button id="verticalViewBtn" class="btn btn-view" data-view="vertical">
+                        <span>↕️</span> Vertical
+                    </button>
+                </div>
+                <div class="control-group">
+                    <button id="expandAllBtn" class="btn btn-control">
+                        <span>📂</span> Expand All
+                    </button>
+                    <button id="collapseAllBtn" class="btn btn-control">
+                        <span>📁</span> Collapse All
+                    </button>
+                </div>
+                <div class="control-group">
+                    <button id="prevBtn" class="btn btn-nav">
+                        <span>⬅️</span> Prev
+                    </button>
+                    <button id="nextBtn" class="btn btn-nav">
+                        <span>➡️</span> Next
+                    </button>
+                </div>
+                <div class="control-group">
+                    <button id="zoomInBtn" class="btn btn-zoom">
+                        <span>🔍</span>+
+                    </button>
+                    <button id="zoomOutBtn" class="btn btn-zoom">
+                        <span>🔍</span>−
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-container">
+        <div class="roadmap-wrapper" id="roadmapWrapper">
+            <div class="roadmap-container horizontal" id="roadmapContainer">
+                <!-- Checkpoints will be dynamically inserted here -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Detail Panel Overlay -->
+    <div class="detail-overlay" id="detailOverlay">
+        <div class="detail-panel" id="detailPanel">
+            <button class="close-btn" id="closeDetailBtn">&times;</button>
+            <div class="detail-content" id="detailContent">
+                <!-- Detail content will be dynamically inserted -->
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
